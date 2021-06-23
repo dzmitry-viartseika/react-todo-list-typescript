@@ -1,4 +1,4 @@
-Available Scripts
+<h2>Available Scripts</h2>
 In the project directory, you can run:
 
 yarn start
@@ -9,8 +9,8 @@ The page will reload if you make edits.
 You will also see any lint errors in the console.
 
 
-Demo screenshot below
+<h2>Demo screenshot below</h2>
 
 ![image](https://user-images.githubusercontent.com/35404801/123148401-dc248400-d468-11eb-9b29-c3514876e628.png)
 
-Stack: React, Routing, localStorage, Typescript
+<b>Stack:</b> React, Routing, localStorage, Typescript
