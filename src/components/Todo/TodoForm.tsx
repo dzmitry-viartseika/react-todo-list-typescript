@@ -16,6 +16,7 @@ export const TodoForm: React.FC<ITodoFormProps> = (props) => {
         if (event.key === 'Enter') {
             setTitle(event.target.value);
             props.onAddTodo(event.target.value);
+            setTitle('');
         }
     }
 

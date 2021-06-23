@@ -1,47 +1,21 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { NavBar } from './components/NavBar/NavBar';
-import { TodoForm } from './components/Todo/TodoForm';
-import { TodoList } from "./components/Todo/TodoList";
-import { ITodoItem } from './model/index';
+import { TodosPage } from './pages/TodosPage';
+import { AboutPage } from './pages/AboutPage';
+
+declare const confirm: (string: string) => boolean;
 
 const App: React.FC = () => {
-  const [todosList, setTodosList] = useState<ITodoItem[]>([]);
-
-  const addNewTodo = (title: string) => {
-      const newTodo: ITodoItem = {
-        id: Date.now(),
-        completed: false,
-        title: title
-      }
-      setTodosList([newTodo, ...todosList]);
-  }
-
-  const toggleHandler = (id: number) => {
-      setTodosList(prev => prev.map((todo: ITodoItem) => {
-            if (todo.id === id) {
-                todo.completed = !todo.completed;
-            }
-            return todo;
-        }));
-  }
-
-    const removeTodoItem = (id: number) => {
-        setTodosList(prev => prev.filter((todo) => todo.id !== id));
-    }
 
   return (
     <BrowserRouter>
       <NavBar />
-        <TodoForm onAddTodo={addNewTodo}/>
-        <TodoList
-            todos={todosList}
-            removeTodoItem={removeTodoItem}
-            toggleHandler={toggleHandler}
-        />
       <div className="container">
-        <Switch>
-        </Switch>
+          <Switch>
+              <Route component={TodosPage} path="/" exact />
+              <Route component={AboutPage} path="/about" />
+          </Switch>
       </div>
     </BrowserRouter>
   )
