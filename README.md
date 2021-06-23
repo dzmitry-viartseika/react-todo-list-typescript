@@ -1,3 +1,4 @@
+<h1> Pet project - TODO LIST</h1>
 <h2>Available Scripts</h2>
 In the project directory, you can run:
 
@@ -13,4 +14,5 @@ You will also see any lint errors in the console.
 
 ![image](https://user-images.githubusercontent.com/35404801/123148401-dc248400-d468-11eb-9b29-c3514876e628.png)
 
-<b>Stack:</b> React, Routing, localStorage, Typescript
+<h3>Project stack:</h3> 
+React Hooks, Routing, localStorage, Typescript
